@@ -6,8 +6,8 @@
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: #E9F1FA;
-  --primary-color: #2979FF;
+  --bg-color: #e9f1fa;
+  --primary-color: #2979ff;
   --secondary-color: #ff7235;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #4a646d;
@@ -168,6 +168,12 @@ nav ul li {
   margin: 10px;
 }
 
+.icon-card:hover, .up-arrow:hover {
+  animation: pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+  cursor: pointer;
+}
+
 /* section proyectos */
 .proyectos {
   background-color: var(--bg-color);
@@ -290,6 +296,7 @@ nav ul li {
 .socicon {
   width: 5rem;
   height: 5rem;
+  border-radius: 40px;
 }
 
 /* boton desplazarse hacia arriba */
