@@ -7,7 +7,11 @@
   --bold-font: 700;
   --bolder-font: 900;
   --bg-color: #e9f1fa;
+  --bg-color2: #fafafa;
+  --bg-color-dark: #000c1a;
+  --bg-color-dark2: #001f42; 
   --primary-color: #2979ff;
+  --primary-color-dark: #dee9fd;
   --secondary-color: #ff7235;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #4a646d;
@@ -16,6 +20,8 @@
   --line-height: 1.7rem;
   --transition: 0.3s;
   --darkmodetoggle: #ebebeb;
+  --moon-color: #fff;
+  --sun-color: #7e7e7e;
 }
 
 html {
@@ -27,7 +33,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 2px solid red; */
 }
 
 ul {
@@ -46,6 +51,8 @@ a:hover {
 
 body {
   font-family: var(--font-family);
+  background: var(--bg-color2);
+  transition: var(--transition);
 }
 
 /* CSS Flexbox */
@@ -68,17 +75,19 @@ nav .background {
   left: 0;
   height: 100%;
   height: -webkit-fill-available;
+  transition: var(--transition);
 }
 
 nav .darkmode-container {
+  display: flex;
   position: relative;
   z-index: 2;
 }
 
 /* crear el contenedor del check */
 nav .darkmode-container label {
-  width: 6rem;
-  height: 3rem;
+  width: 5rem;
+  height: 2rem;
   display: block;
   background: var(--darkmodetoggle);
   border-radius: 200px;
@@ -87,14 +96,35 @@ nav .darkmode-container label {
   transition: 0.3s; /* para la animacion */
 }
 
+/* icons */
+
+nav .darkmode-container label div {
+  position: absolute;
+  z-index: 1;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+nav .darkmode-container label .sun {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+}
+
+nav .darkmode-container label .moon {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+}
+
 /* crear el sol */
 nav .darkmode-container label::after {
   content: "";
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
   position: absolute;
   top: 50%;
-  transform: translateY(-25%);
+  transform: translateY(-50%);
   left: 5%;
   background: linear-gradient(180deg, #ffcc89, #d8860b);
   border-radius: 180px;
@@ -113,16 +143,31 @@ nav .darkmode-container input:checked + label {
   background: #242424;
 }
 
+/* NO FUNCIONA PORQUE LOS ARCHIVOS SVG no se cambian con clases */
+/* cambiar los colores del sol y luna en el estado checked */
+nav .darkmode-container input:checked + label .sun {
+  background-color: var(--sun-color);
+  -webkit-mask: url("../icons/weather-sun-svgrepo-com.svg") no-repeat center;
+  mask: url("../icons/weather-sun-svgrepo-com.svg") no-repeat center;
+}
+
+nav .darkmode-container input:checked + label .moon {
+  background-color: var(--moon-color);
+  -webkit-mask: url("../icons/weather-moon-svgrepo-com.svg") no-repeat center;
+  mask: url("../icons/weather-moon-svgrepo-com.svg") no-repeat center;
+}
+
 /* estado para cuando está activado el darkmode */
 nav .darkmode-container input:checked + label::after {
   left: 6rem;
-  transform: translateX(-105%) translateY(-25%);
+  transform: translateX(-180%) translateY(-50%);
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
 nav h1 {
   z-index: 2;
   color: var(--primary-color);
+  transition: var(--transition);
 }
 
 nav a {
@@ -171,10 +216,12 @@ nav ul li {
 }
 
 .bio {
+  color: var(--primary-color);
   width: 25rem;
   padding: 0.625rem;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  transition: var(--transition);
 }
 
 .bio h1 {
@@ -188,8 +235,10 @@ nav ul li {
 
 /* mas sobre mi */
 .mas-sobre {
+  color: var(--primary-color);
   background-color: var(--bg-color);
   padding: 1rem 6rem;
+  transition: var(--transition);
 }
 
 .mas-sobre h2 {
@@ -204,10 +253,12 @@ nav ul li {
 
 /* seccion habilidades */
 .habilidades {
+  color: var(--primary-color);
   max-width: 68.75rem;
   margin: auto;
   text-align: center;
   margin-top: 2.5rem;
+  transition: var(--transition);
 }
 
 .encabezado-habilidad {
@@ -231,6 +282,7 @@ nav ul li {
   margin: 10px;
 }
 
+/* usando la librería animate.css */
 .icon-card:hover,
 .up-arrow:hover {
   animation: pulse;
@@ -242,9 +294,11 @@ nav ul li {
 
 /* section proyectos */
 .proyectos {
+  color: var(--primary-color);
   background-color: var(--bg-color);
   padding: 32px 0;
   margin-top: 2rem;
+  transition: var(--transition);
 }
 
 .project-pic {
@@ -291,7 +345,9 @@ nav ul li {
 
 /* formulario de contacto */
 .contacto {
+  color: var(--primary-color);
   margin-top: 2rem;
+  transition: var(--transition);
 }
 
 .contacto h2 {
@@ -311,6 +367,7 @@ nav ul li {
   line-height: 2.7em;
   font-weight: var(--bold-font);
   color: var(--primary-color);
+  transition: var(--transition);
 }
 
 .formulario-contacto-contenedor textarea {
@@ -329,6 +386,7 @@ nav ul li {
 
 .input-field::placeholder {
   color: var(--primary-color);
+  transition: var(--transition);
 }
 
 .submit-btn {
@@ -357,6 +415,7 @@ nav ul li {
   position: fixed;
   right: 1%;
   bottom: 50%;
+  z-index: 999;
 }
 
 .socicon {
@@ -380,10 +439,12 @@ nav ul li {
 
 /* footer */
 footer {
+  color: var(--primary-color);
   background-color: var(--bg-color);
   padding: 1.25rem;
   text-align: center;
   margin: 2rem 0 0;
+  transition: var(--transition);
 }
 
 /* media queries */
@@ -418,6 +479,7 @@ footer {
   }
 
   nav ul.show {
+    transition: var(--transition);
     transform: translateY(0);
   }
 
