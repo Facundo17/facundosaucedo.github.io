@@ -90,10 +90,12 @@ nav .darkmode-container label {
 /* crear el sol */
 nav .darkmode-container label::after {
   content: "";
-  width: 3rem;
-  height: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
   position: absolute;
-  left: 0;
+  top: 50%;
+  transform: translateY(-25%);
+  left: 5%;
   background: linear-gradient(180deg, #ffcc89, #d8860b);
   border-radius: 180px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -114,7 +116,7 @@ nav .darkmode-container input:checked + label {
 /* estado para cuando está activado el darkmode */
 nav .darkmode-container input:checked + label::after {
   left: 6rem;
-  transform: translateX(-100%);
+  transform: translateX(-105%) translateY(-25%);
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
