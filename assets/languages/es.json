@@ -1,0 +1,13 @@
+{
+    "title" : "Facundo Saucedo | Web Developer | Frontend Developer",
+    "navbar": {
+        "nav-title" : "Facundo Saucedo",
+        "link1": "Acerca de Mí",
+        "link2": "Habilidades",
+        "link3": "Proyectos",
+        "link4": "Contacto"
+    },
+    "hero" : {
+        
+    }
+}
