@@ -1,10 +1,10 @@
 // elemento raiz
 const root = document.querySelector(":root");
 
-const desplazarArriba = document.querySelector("#desplazarse-hacia-arriba");
+const desplazarArriba = document.querySelector("#display-up");
 
 /* elementos de la barra de navegación */
-const burger = document.querySelector("#menu-hamburguesa");
+const burger = document.querySelector("#burger-menu");
 const ul = document.querySelector("nav ul");
 const navLink = document.querySelectorAll(".nav-link");
 const darkModeToggle = document.getElementById("darkmode-toggle");

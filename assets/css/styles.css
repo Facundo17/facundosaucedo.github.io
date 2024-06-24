@@ -98,7 +98,7 @@ nav .darkmode-container label {
 
 /* icons */
 
-nav .darkmode-container label div {
+nav .darkmode-container label .sun, nav .darkmode-container label .moon {
   position: absolute;
   z-index: 1;
   width: 1.6rem;
@@ -109,12 +109,16 @@ nav .darkmode-container label .sun {
   top: 50%;
   transform: translateY(-50%);
   left: 5%;
+  background-image: url("../icons/weather-sun-svgrepo-com.svg");
+  background-size: cover;
 }
 
 nav .darkmode-container label .moon {
   top: 50%;
   transform: translateY(-50%);
   right: 5%;
+  background-image: url("../icons/weather-moon-svgrepo-com.svg");
+  background-size: cover;
 }
 
 /* crear el sol */
@@ -141,20 +145,6 @@ nav .darkmode-container input {
 
 nav .darkmode-container input:checked + label {
   background: #242424;
-}
-
-/* NO FUNCIONA PORQUE LOS ARCHIVOS SVG no se cambian con clases */
-/* cambiar los colores del sol y luna en el estado checked */
-nav .darkmode-container input:checked + label .sun {
-  background-color: var(--sun-color);
-  -webkit-mask: url("../icons/weather-sun-svgrepo-com.svg") no-repeat center;
-  mask: url("../icons/weather-sun-svgrepo-com.svg") no-repeat center;
-}
-
-nav .darkmode-container input:checked + label .moon {
-  background-color: var(--moon-color);
-  -webkit-mask: url("../icons/weather-moon-svgrepo-com.svg") no-repeat center;
-  mask: url("../icons/weather-moon-svgrepo-com.svg") no-repeat center;
 }
 
 /* estado para cuando está activado el darkmode */
@@ -190,7 +180,7 @@ nav ul li {
   font-weight: var(--bold-font);
 }
 
-.menu-hamburguesa {
+.burger-menu {
   color: var(--primary-color);
   font-size: 2rem;
   border: 0;
@@ -234,25 +224,33 @@ nav ul li {
 }
 
 /* mas sobre mi */
-.mas-sobre {
+.more-about {
   color: var(--primary-color);
   background-color: var(--bg-color);
   padding: 1rem 6rem;
   transition: var(--transition);
 }
 
-.mas-sobre h2 {
+.more-about h2 {
   margin-bottom: var(--bottom-margin);
   text-align: center;
 }
 
-.mas-sobre p {
+.more-about p {
   line-height: var(--line-height);
   padding: 0.4rem;
 }
 
-/* seccion habilidades */
-.habilidades {
+.more-about .about-list {
+  padding: 1rem 0 1rem 0;
+}
+
+.more-about .about-list ul {
+  list-style-type: disc !important;
+}
+
+/* seccion skils */
+.skils {
   color: var(--primary-color);
   max-width: 68.75rem;
   margin: auto;
@@ -292,8 +290,8 @@ nav ul li {
   cursor: pointer;
 }
 
-/* section proyectos */
-.proyectos {
+/* section project */
+.project {
   color: var(--primary-color);
   background-color: var(--bg-color);
   padding: 32px 0;
@@ -306,36 +304,36 @@ nav ul li {
   height: 60%;
 }
 
-.contenedor-de-proyectos {
+.projects-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.titulo-de-proyectos {
+.project-title {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.contenedor-de-proyecto {
+.project-container {
   text-align: center;
   width: 21.875rem;
   padding: 1rem;
 }
 
-.contenedor-de-proyecto p {
+.project-container p {
   padding: 0.4rem;
 }
 
-.titulo-de-proyecto {
+.project-title {
   margin-bottom: var(--bottom-margin);
 }
 
-.detalles-de-proyecto {
+.project-details {
   margin-bottom: var(--bottom-margin);
 }
 
-.tarjeta-de-proyecto {
+.card-project {
   background-color: #fff;
   border-radius: 11px;
   box-shadow: 0 3px 10px var(--primary-shadow);
@@ -343,19 +341,19 @@ nav ul li {
   margin: 10px;
 }
 
-/* formulario de contacto */
-.contacto {
+/* formulario de contact */
+.contact {
   color: var(--primary-color);
   margin-top: 2rem;
   transition: var(--transition);
 }
 
-.contacto h2 {
+.contact h2 {
   text-align: center;
   margin-bottom: var(--bottom-margin-2);
 }
 
-.formulario-contacto-contenedor {
+.contact-form-container {
   max-width: 40.75rem;
   margin: 0 auto;
   padding: 0.938rem;
@@ -363,19 +361,19 @@ nav ul li {
   box-shadow: 0 3px 10px var(--secondary-shadow);
 }
 
-.formulario-contacto-contenedor label {
+.contact-form-container label {
   line-height: 2.7em;
   font-weight: var(--bold-font);
   color: var(--primary-color);
   transition: var(--transition);
 }
 
-.formulario-contacto-contenedor textarea {
+.contact-form-container textarea {
   min-height: 6.25rem;
   font-size: 14px;
 }
 
-.formulario-contacto-contenedor .input-field {
+.contact-form-container .input-field {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
@@ -408,8 +406,8 @@ nav ul li {
   cursor: pointer;
 }
 
-/* iconos de redes sociales */
-.sociales {
+/* iconos de redes social */
+.social {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -425,7 +423,7 @@ nav ul li {
 }
 
 /* boton desplazarse hacia arriba */
-.desplazarse-hacia-arriba {
+.display-up {
   position: fixed;
   right: 0.5%;
   bottom: 3%;
@@ -474,7 +472,7 @@ footer {
     margin: 8px;
   }
 
-  .menu-hamburguesa {
+  .burger-menu {
     display: block;
   }
 
@@ -500,16 +498,16 @@ footer {
     width: 20.5rem;
   }
 
-  .mas-sobre {
+  .more-about {
     margin-top: 2rem;
     padding: 1rem 3.5rem;
   }
 
-  .mas-sobre h2 {
+  .more-about h2 {
     text-align: center;
   }
 
-  .mas-sobre p {
+  .more-about p {
     text-align: justify;
   }
 
@@ -518,16 +516,16 @@ footer {
     height: 5.25rem;
   }
 
-  .contenedor-de-proyectos {
+  .projects-container {
     flex-direction: column;
   }
 
-  .contenedor-de-proyecto {
+  .project-container {
     width: 20.875rem;
   }
 
   /* formulario */
-  .formulario-contacto-contenedor {
+  .contact-form-container {
     max-width: 23.75rem;
   }
 
@@ -548,11 +546,11 @@ footer {
     width: 18.3rem;
   }
 
-  .contenedor-de-proyecto {
+  .project-container {
     width: 17.875rem;
   }
 
-  .formulario-contacto-contenedor {
+  .contact-form-container {
     max-width: 17.75rem;
   }
 }
