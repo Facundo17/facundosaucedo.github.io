@@ -32,21 +32,33 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <h1 id="nav-title">Facundo Saucedo</h1>
+      <h1>Facundo Saucedo</h1>
       <div class="background"></div>
       <ul class="navegation">
-        <li><a href="#about" class="nav-link" id="link1">Acerca de Mí</a></li>
-        <li><a href="#skils" class="nav-link" id="link2">Habilidades</a></li>
-        <li><a href="#project" class="nav-link" id="link3">Proyectos</a></li>
-        <li><a href="#contact" class="nav-link" id="link4">Contacto</a></li>
+        <li><a href="#about" class="nav-link" id="link1"></a></li>
+        <li><a href="#skils" class="nav-link" id="link2"></a></li>
+        <li><a href="#project" class="nav-link" id="link3"></a></li>
+        <li><a href="#contact" class="nav-link" id="link4"></a></li>
       </ul>
-      <div class="darkmode-container">
-        <input type="checkbox" id="darkmode-toggle" />
-        <label for="darkmode-toggle">
-          <div class="sun"></div>
-          <div class="moon"></div>
-        </label>
+
+      <div class="switchers-container">
+        <div class="language-container">
+          <div class="flag" id="flag"></div>
+          <select class="selector-language" name="languages" id="languages">
+            <option value="en">Inglés</option>
+            <option value="es">Español</option>
+          </select>
+        </div>
+
+        <div class="darkmode-container">
+          <input type="checkbox" id="darkmode-toggle" />
+          <label for="darkmode-toggle">
+            <div class="sun"></div>
+            <div class="moon"></div>
+          </label>
+        </div>
       </div>
+
       <button class="burger-menu" id="burger-menu">
         <ion-icon class="barras" name="menu-outline"></ion-icon>
       </button>
@@ -60,47 +72,40 @@
         class="hero-img"
       />
       <div class="bio animate__animated animate__shakeX">
-        <h2 class="bio-title">Sobre Mí</h2>
-        <p class="bio-text">
-          Desarrollador de Software con 6 años de experiencia en desarrollo
-          front-end de páginas web y aplicaciones nativas. Licenciado en
-          analista de sistemas.
-        </p>
+        <h2 class="bio-title" id="bio-title"></h2>
+        <p class="bio-text" id="bio-text"></p>
       </div>
     </section>
     <!-- More about -->
-    <section class="more-about">
-      <h2>Más sobre mí</h2>
+    <section class="more-about extra-padding">
+      <h2 id="more-about"></h2>
 
       <div class="about-list">
-        <h3>Fullstack Developer en Dixit Estudio</h3>
-        <p>Julio 2018 - Junio 2021</p>
+        <h3 id="dx-title"></h3>
+        <p id="dx-date"></p>
         <ul>
           <li>
-            Desarrollé paneles administrativos web y páginas web para la
-            empresa.
+            <span id="dx-list1"></span>
             <a href="https://dixit.tech/" target="_blank"
               >https://dixit.tech/</a
             >
           </li>
-          <li>Gestioné y mantuve aplicaciones nativas en Android Studio.</li>
+          <li><span id="dx-list2"></span></li>
         </ul>
       </div>
 
       <div class="about-list">
-        <h3>Frontend Developer en Ontop Inc</h3>
-        <p>Enero 2022 - Abril 2024</p>
+        <h3 id="ontop-title"></h3>
+        <p id="ontop-desc"></p>
         <ul>
           <li>
-            Trabajé en el desarrollo y mantenimiento de este home usando
-            Webflow.
+            <span id="ontop-list1"></span>
             <a href="https://www.getontop.com/" target="_blank"
               >https://www.getontop.com/</a
             >
           </li>
           <li>
-            Como frontend, estuve dedicado al desarrollo y mantenimiento de este
-            sitio web.
+            <span id="ontop-list2"></span>
             <a href="https://app.getontop.com/" target="_blank"
               >https://app.getontop.com/</a
             >
@@ -110,8 +115,8 @@
     </section>
 
     <!-- Skills section -->
-    <section class="skils" id="skils">
-      <h2 class="header-skils">Mis mejores habilidades</h2>
+    <section class="skils extra-padding" id="skils">
+      <h2 class="header-skils" id="header-skils"></h2>
 
       <div class="skils-container">
         <div class="first-set animate__animated animate__pulse">
@@ -159,8 +164,8 @@
     </section>
 
     <!-- Projects section -->
-    <section class="project" id="project">
-      <h2 class="project-title">Algunos de mis proyectos recientes</h2>
+    <section class="project extra-padding" id="project">
+      <h2 class="project-title" id="project-title"></h2>
       <div class="projects-container">
         <div class="project-container card-project">
           <img
@@ -213,41 +218,38 @@
     </section>
 
     <!-- Contact section -->
-    <section class="contact" id="contact">
-      <h2>Contactame</h2>
+    <section class="contact extra-padding" id="contact">
+      <h2 id="contact-title"></h2>
       <div class="contact-form-container">
         <div class="contact-form">
           <form action="https://formspree.io/f/mrgnnnbr" method="POST">
             <!-- id personalizado para recibir emails -->
             <div class="form-control">
-              <label for="name">Nombre</label>
+              <label for="name" id="form-name"></label>
               <input
                 type="text"
                 id="name"
                 name="sender-name"
-                placeholder="Escribe tu nombre"
                 class="input-field"
                 required
               />
             </div>
             <div class="form-control">
-              <label for="email">Correo Electrónico</label>
+              <label for="email" id="form-email"></label>
               <input
                 type="email"
                 id="email"
                 name="sender-email"
-                placeholder="Ingreso tu correo electrónico"
                 class="input-field"
                 required
               />
             </div>
             <div class="form-control">
-              <label for="message">Mensaje</label>
+              <label for="message" id="form-messsage"></label>
               <textarea
                 id="message"
                 cols="60"
                 rows="10"
-                placeholder="Escribe tu mensaje"
                 name="message"
                 class="input-field"
                 required
@@ -255,9 +257,9 @@
             </div>
             <input
               type="submit"
-              value="Enviar"
+              value=""
               id="submit-btn"
-              class="submit-btn"
+              class="submit-btn place"
             />
           </form>
         </div>
@@ -313,6 +315,7 @@
     </footer>
 
     <!-- Website scripts -->
+    <script src="assets/js/languages.js"></script>
     <script src="assets/js/app.js"></script>
 
     <!-- Ion icons scripts -->
