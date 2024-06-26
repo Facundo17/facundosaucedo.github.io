@@ -10,6 +10,8 @@ const navLink = document.querySelectorAll(".nav-link");
 const darkModeToggle = document.getElementById("darkmode-toggle");
 const navBg = document.querySelector(".background");
 
+const panels = document.querySelectorAll(".panel");
+
 desplazarArriba.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
@@ -36,16 +38,25 @@ function getVariableValue(name) {
   return value.getPropertyValue(name);
 }
 
+function changeThemePanels() {
+  panels.forEach((el) => {
+    el.classList.toggle("dark-theme");
+  });
+}
+
 // guardar los colores del theme
 const bgColor = getVariableValue("--bg-color");
 const bgColorDark = getVariableValue("--bg-color-dark");
 const bgColor2 = getVariableValue("--bg-color2");
 const bgColorDark2 = getVariableValue("--bg-color-dark2");
+const primaryColor = getVariableValue("--primary-color");
+const primaryColorDark = getVariableValue("--primary-color-dark");
 
 // cambiar al modo oscuro //
 darkModeToggle.addEventListener("click", () => {
   const currentBg = getVariableValue("--bg-color");
   const currentBg2 = getVariableValue("--bg-color2");
+  const currentColor = getVariableValue("--primary-color");
 
   if (currentBg === bgColor) {
     root.style.setProperty("--bg-color", bgColorDark);
@@ -58,4 +69,12 @@ darkModeToggle.addEventListener("click", () => {
   } else {
     root.style.setProperty("--bg-color2", bgColor2);
   }
+
+  if (currentColor === primaryColor) {
+    root.style.setProperty("--primary-color", primaryColorDark);
+  } else {
+    root.style.setProperty("--primary-color", primaryColor);
+  }
+
+  changeThemePanels();
 });

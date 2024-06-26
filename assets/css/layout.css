@@ -141,6 +141,17 @@ nav .language-container .flag.spain {
   padding: 0.3rem 0;
 }
 
+.dark-theme {
+  background: var(--panel-dark) !important;
+  box-shadow: none !important;
+  transition: var(--transition);
+}
+
+.dark-theme input, .dark-theme textarea, .dark-theme.card-project {
+  background: var(--sub-panel-dark) !important;
+  border: 0 !important;
+}
+
 /* mas sobre mi */
 .more-about {
   color: var(--primary-color);
