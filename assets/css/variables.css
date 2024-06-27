@@ -6,12 +6,14 @@
     --bolder-font: 900;
     --bg-color: #e9f1fa;
     --bg-color2: #fafafa;
+    --bg-hover: #6f6f6f;
     --bg-color-dark: #252525;
     --bg-color-dark2: #121212;
     --panel: #fff;
     --panel-dark: #252525;
     --sub-panel-dark: #444444;
     --primary-color: #2979ff;
+    --btn-color: #2979ff;
     --primary-color-dark: #fff;
     --secondary-color: #7bacff;
     --primary-shadow: #8b8eaf;
@@ -23,4 +25,8 @@
     --darkmodetoggle: #ebebeb;
     --moon-color: #fff;
     --sun-color: #7e7e7e;
+    --size-switcher: 1em;
+    --flag-size: 2em;
+    --us-flag: url("../icons/usa_flag.svg");
+    --es-flag: url("../icons/spain_flag.svg");
   }

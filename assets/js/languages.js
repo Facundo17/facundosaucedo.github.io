@@ -53,7 +53,6 @@ function setFlag(lang) {
         break;
     case "en":
         flag.classList.remove("spain");
-    default:
         break;
   }
 }
@@ -64,7 +63,13 @@ window.onload = function () {
 };
 
 // cambiar idioma
-changeLanguages.addEventListener("change", () => {
+changeLanguages.addEventListener("click" ,(event) => {
+  let lang = event.target.classList[0];
+
+  setLanguage(lang);
+  setFlag(lang);
+});
+/*changeLanguages.addEventListener("change", () => {
   setLanguage(changeLanguages.value);
   setFlag(changeLanguages.value);
-});
+});*/

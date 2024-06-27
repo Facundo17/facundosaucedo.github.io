@@ -1,27 +1,27 @@
-
 /* ----------------------- dark/mode -----------------------*/
 nav .switchers-container {
-  z-index: 2;
+  z-index: 3;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  align-items: center;
 }
 
 nav .switchers-container .darkmode-container {
   display: flex;
+  margin: 1em;
   max-width: fit-content;
   position: relative;
 }
 
 /* crear el contenedor del check */
 nav .switchers-container .darkmode-container label {
-  width: 5rem;
-  height: 2rem;
+  width: 4rem;
+  height: 1.5rem;
   display: block;
   background: var(--darkmodetoggle);
   border-radius: 200px;
-  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
-    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px 5px 15px rgb(127 127 127 / 40%),
+    inset 0px -5px 15px rgb(237 237 237 / 40%);
   cursor: pointer;
   transition: 0.3s; /* para la animacion */
 }
@@ -31,8 +31,8 @@ nav .switchers-container .darkmode-container label .sun,
 nav .switchers-container .darkmode-container label .moon {
   position: absolute;
   z-index: 1;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: var(--size-switcher);
+  height: var(--size-switcher);
 }
 
 nav .switchers-container .darkmode-container label .sun {
@@ -54,8 +54,8 @@ nav .switchers-container .darkmode-container label .moon {
 /* crear el sol */
 nav .switchers-container .darkmode-container label::after {
   content: "";
-  width: 1.6rem;
-  height: 1.6rem;
+  width: var(--size-switcher);
+  height: var(--size-switcher);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -80,29 +80,70 @@ nav .switchers-container .darkmode-container input:checked + label {
 /* estado para cuando está activado el darkmode */
 nav .switchers-container .darkmode-container input:checked + label::after {
   left: 6rem;
-  transform: translateX(-180%) translateY(-50%);
-  background: linear-gradient(180deg, #777, #3a3a3a);
+  transform: translateX(-320%) translateY(-50%);
+  background: linear-gradient(180deg, #b4b4b4, #707070);
 }
 
 /* ----------------------- End dark/mode -----------------------*/
-
 
 /* ----------------------- Switch Language -----------------------*/
 
 nav .switchers-container .language-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+
+nav .switchers-container .language-container .flag-options {
+  position: absolute;
+  right: 0;
+  background-color: var(--bg-color2);
+  border-radius: 8px;
+  transform: translateY(3em);
+  box-shadow: 0px 0px 5px 0px var(--primary-shadow);
+  z-index: 5;
+  display: none;
+}
+
+nav .switchers-container .language-container .flag-options .en:hover,
+nav .switchers-container .language-container .flag-options .es:hover {
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--bg-hover);
+}
+
+nav .switchers-container .language-container:hover {
+  cursor: pointer;
+}
+
+nav .switchers-container .language-container:hover .flag-options {
+  display: block;
+}
+
+nav .switchers-container .language-container .flag-options .en {
+  width: var(--flag-size);
+  height: var(--flag-size);
+  padding: 0.5em 2em;
+  background-size: var(--flag-size);
+  background: var(--us-flag) no-repeat center/var(--flag-size);;
+}
+
+nav .switchers-container .language-container .flag-options .es {
+  width: var(--flag-size);
+  height: var(--flag-size);
+  padding: 0.5em 2em;
+  background: var(--es-flag) no-repeat center/var(--flag-size);;
 }
 
 nav .switchers-container .language-container .flag {
-  width: 2em;
-  height: 2em;
-  background: url("../icons/usa_flag.svg") no-repeat center;
-  margin-right: 1em;
+  width: var(--flag-size);
+  height: var(--flag-size);
+  background: var(--us-flag) no-repeat center;
 }
 
 nav .language-container .flag.spain {
-  background: url("../icons/spain_flag.svg") no-repeat center;
+  background: var(--es-flag) no-repeat center;
 }
 
 /* ----------------------- End Switch Language -----------------------*/
@@ -111,16 +152,19 @@ nav .language-container .flag.spain {
 .hero {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
+  justify-content: space-between;
+  gap: 2.5em;
   /* espacio entre columnas */
-  max-width: 68.75rem;
+  max-width: 75em;
   margin: auto;
 }
 
 .hero img {
-  height: 37.5rem;
-  width: 37.5rem;
+  margin-top: 15em;
+  margin-bottom: 15em;
+  height: 30em;
+  width: 40em;
+  border-radius: 24px;
 }
 
 .bio {
@@ -147,7 +191,9 @@ nav .language-container .flag.spain {
   transition: var(--transition);
 }
 
-.dark-theme input, .dark-theme textarea, .dark-theme.card-project {
+.dark-theme input:not(.submit-btn), /* todos los input, excepto class=submit-btn */
+.dark-theme textarea,
+.dark-theme.card-project {
   background: var(--sub-panel-dark) !important;
   border: 0 !important;
 }
@@ -316,13 +362,17 @@ nav .language-container .flag.spain {
   transition: var(--transition);
 }
 
+textarea {
+  resize: none;
+}
+
 .submit-btn {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   color: #fff;
-  background-color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  background-color: var(--btn-color);
+  border: 2px solid var(--btn-color);
   border-radius: 5px;
   font-size: 1rem;
   font-weight: var(--bold-font);

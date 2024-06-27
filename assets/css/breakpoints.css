@@ -28,6 +28,10 @@
     display: block !important;
   }
 
+  nav ul {
+    z-index: 1 !important;
+  }
+
   nav ul.show {
     transition: var(--transition) !important;
     transform: translateY(0) !important;
