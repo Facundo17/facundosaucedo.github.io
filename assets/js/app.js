@@ -1,3 +1,7 @@
+import { checkCookie, deleteCookie, setCookie } from "./cookie-service.js";
+
+let darkmode = false;
+
 // elemento raiz
 const root = document.querySelector(":root");
 
@@ -38,12 +42,6 @@ function getVariableValue(name) {
   return value.getPropertyValue(name);
 }
 
-function changeThemePanels() {
-  panels.forEach((el) => {
-    el.classList.toggle("dark-theme");
-  });
-}
-
 // guardar los colores del theme
 const bgColor = getVariableValue("--bg-color");
 const bgColorDark = getVariableValue("--bg-color-dark");
@@ -52,29 +50,76 @@ const bgColorDark2 = getVariableValue("--bg-color-dark2");
 const primaryColor = getVariableValue("--primary-color");
 const primaryColorDark = getVariableValue("--primary-color-dark");
 
-// cambiar al modo oscuro //
-darkModeToggle.addEventListener("click", () => {
+function changeBgColor() {
   const currentBg = getVariableValue("--bg-color");
-  const currentBg2 = getVariableValue("--bg-color2");
-  const currentColor = getVariableValue("--primary-color");
 
   if (currentBg === bgColor) {
     root.style.setProperty("--bg-color", bgColorDark);
   } else {
     root.style.setProperty("--bg-color", bgColor);
   }
+}
+
+function changeBgColor2() {
+  const currentBg2 = getVariableValue("--bg-color2");
 
   if (currentBg2 === bgColor2) {
     root.style.setProperty("--bg-color2", bgColorDark2);
   } else {
     root.style.setProperty("--bg-color2", bgColor2);
   }
+}
+
+function changeThemePanels() {
+  panels.forEach((el) => {
+    el.classList.toggle("dark-theme");
+  });
+}
+
+function changePrimaryColor() {
+  const currentColor = getVariableValue("--primary-color");
 
   if (currentColor === primaryColor) {
     root.style.setProperty("--primary-color", primaryColorDark);
   } else {
     root.style.setProperty("--primary-color", primaryColor);
   }
+}
 
+function setDarkTheme() {
+  changeBgColor();
+  changeBgColor2();
+  changePrimaryColor();
   changeThemePanels();
+}
+
+// verificar si el darkmode está activado
+let checkDarkMode = checkCookie("darkmode");
+let clickFromLoad = false;
+
+// cambiar al modo oscuro //
+darkModeToggle.addEventListener("click", () => {
+
+  setDarkTheme();
+
+  if (clickFromLoad) {
+    clickFromLoad = false;
+  } else {
+    darkmode = !darkmode;
+    deleteCookie("darkmode");
+    setCookie("darkmode", darkmode, 25);
+  }
 });
+
+if (checkDarkMode === "") {
+  // no existe la cookie
+  darkmode = true;
+  setCookie("darkmode", darkmode, 25);
+  clickFromLoad = true;
+  darkModeToggle.click();
+} else if (checkDarkMode === "true") {
+  // hay una cookie y está activado el darkmode
+  darkmode = true;
+  clickFromLoad = true;
+  darkModeToggle.click();
+}
