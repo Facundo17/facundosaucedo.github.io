@@ -1,186 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <!--CSS Styles -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Facundo Saucedo | Web Developer | Frontend Developer</title>
+  </head>
 
-  <!-- Animate CSS CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <title>Facundo Saucedo | Web Developer | Frontend Developer</title>
-</head>
+  <body>
+    <div class="loader-container" id="loader">
+      <div class="loader"></div>
+    </div>
+    
+    <div class="page-container">
+      <!-- Navbar -->
+      <nav>
+        <h1>Facundo Saucedo</h1>
+        <div class="background"></div>
+        <ul class="navegation">
+          <li><a href="#about" class="nav-link" id="link1"></a></li>
+          <li><a href="#skils" class="nav-link" id="link2"></a></li>
+          <li><a href="#project" class="nav-link" id="link3"></a></li>
+          <li><a href="#contact" class="nav-link" id="link4"></a></li>
+        </ul>
 
-<body>
-  <!-- Navbar -->
-  <nav>
-    <h1>Facundo Saucedo</h1>
-    <div class="background"></div>
-    <ul class="navegation">
-      <li><a href="#about" class="nav-link" id="link1"></a></li>
-      <li><a href="#skils" class="nav-link" id="link2"></a></li>
-      <li><a href="#project" class="nav-link" id="link3"></a></li>
-      <li><a href="#contact" class="nav-link" id="link4"></a></li>
-    </ul>
+        <div class="switchers-container">
+          <div class="language-container">
+            <div class="flag" id="flag"></div>
+            <div class="flag-options" id="languages">
+              <div class="en"></div>
+              <div class="es"></div>
+            </div>
+          </div>
 
-    <div class="switchers-container">
-      <div class="language-container">
-        <div class="flag" id="flag"></div>
-        <div class="flag-options" id="languages">
-          <div class="en"></div>
-          <div class="es"></div>
+          <div class="darkmode-container">
+            <input type="checkbox" id="darkmode-toggle" />
+            <label for="darkmode-toggle">
+              <div class="sun"></div>
+              <div class="moon"></div>
+            </label>
+          </div>
         </div>
-      </div>
 
-      <div class="darkmode-container">
-        <input type="checkbox" id="darkmode-toggle" />
-        <label for="darkmode-toggle">
-          <div class="sun"></div>
-          <div class="moon"></div>
-        </label>
-      </div>
-    </div>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="barras" name="menu-outline"></ion-icon>
+        </button>
+      </nav>
 
-    <button class="burger-menu" id="burger-menu">
-      <ion-icon class="barras" name="menu-outline"></ion-icon>
-    </button>
-  </nav>
+      <!-- Hero Section -->
+      <section class="hero" id="about">
+        <img
+          src="assets/images/hero-logo.webp"
+          alt="jane-doe"
+          loading="lazy"
+          class="hero-img"
+        />
+        <div class="bio panel animate__animated animate__shakeX">
+          <h2 class="bio-title" id="bio-title"></h2>
+          <p class="bio-text" id="bio-text"></p>
+        </div>
+      </section>
+      <!-- More about -->
+      <section class="more-about extra-padding">
+        <h2 id="more-about"></h2>
 
-  <div class="loader-container">
-    <div class="loader"></div>
-  </div>
+        <div class="about-list">
+          <h3 id="dx-title"></h3>
+          <p id="dx-date"></p>
+          <ul>
+            <li>
+              <span id="dx-list1"></span>
+              <a href="https://dixit.tech/" target="_blank"
+                >https://dixit.tech/</a
+              >
+            </li>
+            <li><span id="dx-list2"></span></li>
+          </ul>
+        </div>
 
-  <!-- Hero Section -->
-  <section class="hero" id="about">
-    <img src="assets/images/hero-logo.webp" alt="jane-doe" loading="lazy" class="hero-img" />
-    <div class="bio panel animate__animated animate__shakeX">
-      <h2 class="bio-title" id="bio-title"></h2>
-      <p class="bio-text" id="bio-text"></p>
-    </div>
-  </section>
-  <!-- More about -->
-  <section class="more-about extra-padding">
-    <h2 id="more-about"></h2>
+        <div class="about-list">
+          <h3 id="ontop-title"></h3>
+          <p id="ontop-desc"></p>
+          <ul>
+            <li>
+              <span id="ontop-list1"></span>
+              <a href="https://www.getontop.com/" target="_blank"
+                >https://www.getontop.com/</a
+              >
+            </li>
+            <li>
+              <span id="ontop-list2"></span>
+              <a href="https://app.getontop.com/" target="_blank"
+                >https://app.getontop.com/</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <div class="about-list">
-      <h3 id="dx-title"></h3>
-      <p id="dx-date"></p>
-      <ul>
-        <li>
-          <span id="dx-list1"></span>
-          <a href="https://dixit.tech/" target="_blank">https://dixit.tech/</a>
-        </li>
-        <li><span id="dx-list2"></span></li>
-      </ul>
-    </div>
+      <!-- Skills section -->
+      <section class="skils extra-padding" id="skils">
+        <h2 class="header-skils" id="header-skils"></h2>
 
-    <div class="about-list">
-      <h3 id="ontop-title"></h3>
-      <p id="ontop-desc"></p>
-      <ul>
-        <li>
-          <span id="ontop-list1"></span>
-          <a href="https://www.getontop.com/" target="_blank">https://www.getontop.com/</a>
-        </li>
-        <li>
-          <span id="ontop-list2"></span>
-          <a href="https://app.getontop.com/" target="_blank">https://app.getontop.com/</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Skills section -->
-  <section class="skils extra-padding" id="skils">
-    <h2 class="header-skils" id="header-skils"></h2>
-
-    <div class="skils-container">
-      <div class="first-set animate__animated animate__pulse">
-        <img src="assets/icons/icons8-html-5.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/icons8-css3.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/icons8-javascript.svg" alt="" loading="lazy" class="icon icon-card" />
-      </div>
-
-      <div class="second-set animate__animated animate__pulse">
-        <img src="assets/icons/icons8-bootstrap.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/icons8-react-native.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/icons8-git.svg" alt="" loading="lazy" class="icon icon-card" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects section -->
-  <section class="project extra-padding" id="project">
-    <h2 class="project-title" id="project-title"></h2>
-    <div class="projects-container">
-      <div class="project-container card-project panel">
-        <img src="assets/images/expenseTracker.png" alt="rastreador-de-gastos" loading="lazy" class="project-pic" />
-        <h3 class="project-title">Rastreador de Gastos</h3>
-        <p class="project-details">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-          ratione vel inventore labore commodi modi quos culpa aut saepe!
-          Alias!
-        </p>
-        <a href="#" target="_blank" class="project-link">Check it Out</a>
-      </div>
-      <div class="project-container card-project panel">
-        <img src="assets/images/netflixClone.png" alt="netflic-clone" loading="lazy" class="project-pic" />
-        <h3 class="project-title">Netflix Clone</h3>
-        <p class="project-details">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-          ratione vel inventore labore commodi modi quos culpa aut saepe!
-          Alias!
-        </p>
-        <a href="#" target="_blank" class="project-link">Check it Out</a>
-      </div>
-      <div class="project-container card-project panel">
-        <img src="assets/images/greenyEarth.png" alt="greeny-earth" loading="lazy" class="project-pic" />
-        <h3 class="project-title">Greeny Earth</h3>
-        <p class="project-details">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-          ratione vel inventore labore commodi modi quos culpa aut saepe!
-          Alias!
-        </p>
-        <a href="#" target="_blank" class="project-link">Echale un vistazo!</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact section -->
-  <section class="contact extra-padding" id="contact">
-    <h2 id="contact-title"></h2>
-    <div class="contact-form-container panel">
-      <div class="contact-form">
-        <form action="https://formspree.io/f/mrgnnnbr" method="POST">
-          <!-- id personalizado para recibir emails -->
-          <div class="form-control">
-            <label for="name" id="form-name"></label>
-            <input type="text" id="name" name="sender-name" class="input-field" required />
+        <div class="skils-container">
+          <div class="first-set animate__animated animate__pulse">
+            <img
+              src="assets/icons/icons8-html-5.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <img
+              src="assets/icons/icons8-css3.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <img
+              src="assets/icons/icons8-javascript.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
           </div>
-          <div class="form-control">
-            <label for="email" id="form-email"></label>
-            <input type="email" id="email" name="sender-email" class="input-field" required />
-          </div>
-          <div class="form-control">
-            <label for="message" id="form-messsage"></label>
-            <textarea id="message" cols="60" rows="10" name="message" class="input-field" required></textarea>
-          </div>
-          <input type="submit" value="" id="submit-btn" class="submit-btn place" />
-        </form>
-      </div>
-    </div>
-  </section>
 
-  <!-- Social accounts - Fixed to the right -->
-  <div class="social">
-    <!--<a href="#" target="_blank"
+          <div class="second-set animate__animated animate__pulse">
+            <img
+              src="assets/icons/icons8-bootstrap.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <img
+              src="assets/icons/icons8-react-native.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <img
+              src="assets/icons/icons8-git.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects section -->
+      <section class="project extra-padding" id="project">
+        <h2 class="project-title" id="project-title"></h2>
+        <div class="projects-container">
+          <div class="project-container card-project panel">
+            <img
+              src="assets/images/expenseTracker.png"
+              alt="rastreador-de-gastos"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Rastreador de Gastos</h3>
+            <p class="project-details">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+              ratione vel inventore labore commodi modi quos culpa aut saepe!
+              Alias!
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+          </div>
+          <div class="project-container card-project panel">
+            <img
+              src="assets/images/netflixClone.png"
+              alt="netflic-clone"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Netflix Clone</h3>
+            <p class="project-details">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+              ratione vel inventore labore commodi modi quos culpa aut saepe!
+              Alias!
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+          </div>
+          <div class="project-container card-project panel">
+            <img
+              src="assets/images/greenyEarth.png"
+              alt="greeny-earth"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Greeny Earth</h3>
+            <p class="project-details">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+              ratione vel inventore labore commodi modi quos culpa aut saepe!
+              Alias!
+            </p>
+            <a href="#" target="_blank" class="project-link"
+              >Echale un vistazo!</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section class="contact extra-padding" id="contact">
+        <h2 id="contact-title"></h2>
+        <div class="contact-form-container panel">
+          <div class="contact-form">
+            <form action="https://formspree.io/f/mrgnnnbr" method="POST">
+              <!-- id personalizado para recibir emails -->
+              <div class="form-control">
+                <label for="name" id="form-name"></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="sender-name"
+                  class="input-field"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label for="email" id="form-email"></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="sender-email"
+                  class="input-field"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label for="message" id="form-messsage"></label>
+                <textarea
+                  id="message"
+                  cols="60"
+                  rows="10"
+                  name="message"
+                  class="input-field"
+                  required
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                value=""
+                id="submit-btn"
+                class="submit-btn place"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social accounts - Fixed to the right -->
+      <div class="social">
+        <!--<a href="#" target="_blank"
         ><img
           src="assets/icons/icons8-twitter-circled.gif"
           alt="Twitter"
@@ -194,33 +288,54 @@
           loading="lazy"
           class="socicon"
       /></a>-->
-    <a href="https://linkedin.com/in/facundo-saucedo-318b8a213" target="_blank"><img
-        src="assets/icons/icons8-linkedin-circled.gif" alt="Linkedin" loading="lazy" class="socicon" /></a>
-    <a href="https://github.com/Facundo17" target="_blank"><img src="assets/icons/icons8-github.gif" alt="Github"
-        class="socicon" /></a>
-  </div>
+        <a
+          href="https://linkedin.com/in/facundo-saucedo-318b8a213"
+          target="_blank"
+          ><img
+            src="assets/icons/icons8-linkedin-circled.gif"
+            alt="Linkedin"
+            loading="lazy"
+            class="socicon"
+        /></a>
+        <a href="https://github.com/Facundo17" target="_blank"
+          ><img
+            src="assets/icons/icons8-github.gif"
+            alt="Github"
+            class="socicon"
+        /></a>
+      </div>
 
-  <i class="display-up" id="display-up"><img src="assets/icons/icons8-send-letter-96.png" class="socicon up-arrow"
-      alt="display-up" /></i>
+      <i class="display-up" id="display-up"
+        ><img
+          src="assets/icons/icons8-send-letter-96.png"
+          class="socicon up-arrow"
+          alt="display-up"
+      /></i>
 
-  <!-- Footer section -->
-  <footer>
-    <p class="copy">
-      Copyright &copy;
-      <script>
-        document.write(new Date().getFullYear());
-      </script>
-      All Rights Reserved
-    </p>
-  </footer>
+      <!-- Footer section -->
+      <footer>
+        <p class="copy">
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All Rights Reserved
+        </p>
+      </footer>
+    </div>
 
-  <!-- Website scripts -->
-  <script src="assets/js/languages.js"></script>
-  <script type="module" src="assets/js/app.js"></script>
+    <!-- Website scripts -->
+    <script src="assets/js/languages.js"></script>
+    <script type="module" src="assets/js/app.js"></script>
 
-  <!-- Ion icons scripts -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

@@ -7,6 +7,10 @@ const root = document.querySelector(":root");
 
 const desplazarArriba = document.querySelector("#display-up");
 
+const loader = document.getElementById("loader");
+
+const body = document.querySelector("body");
+
 /* elementos de la barra de navegación */
 const burger = document.querySelector("#burger-menu");
 const ul = document.querySelector("nav ul");
@@ -15,6 +19,9 @@ const darkModeToggle = document.getElementById("darkmode-toggle");
 const navBg = document.querySelector(".background");
 
 const panels = document.querySelectorAll(".panel");
+
+/* when page refresh */
+window.scrollTo(0, 0);
 
 desplazarArriba.addEventListener("click", () => {
   window.scrollTo({
@@ -93,13 +100,27 @@ function setDarkTheme() {
   changeThemePanels();
 }
 
+function showOrHideLoad() {
+  /* simular tiempo */
+
+  setTimeout(() => {
+    if (loader.style.display === "none") {
+      loader.style.display = "block";
+    } else {
+      loader.style.display = "none";
+    }
+
+    body.classList.toggle("body-behavior");
+
+  }, 3000); // 3 seconds
+}
+
 // verificar si el darkmode está activado
 let checkDarkMode = checkCookie("darkmode");
 let clickFromLoad = false;
 
 // cambiar al modo oscuro //
 darkModeToggle.addEventListener("click", () => {
-
   setDarkTheme();
 
   if (clickFromLoad) {
@@ -117,9 +138,11 @@ if (checkDarkMode === "") {
   setCookie("darkmode", darkmode, 25);
   clickFromLoad = true;
   darkModeToggle.click();
+  showOrHideLoad();
 } else if (checkDarkMode === "true") {
   // hay una cookie y está activado el darkmode
   darkmode = true;
   clickFromLoad = true;
   darkModeToggle.click();
+  showOrHideLoad();
 }

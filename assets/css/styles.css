@@ -22,6 +22,12 @@ body {
   font-family: var(--font-family);
   background: var(--bg-color2);
   transition: var(--transition);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.body-behavior {
+  overflow-y: scroll;
 }
 
 /* CSS Flexbox */
@@ -90,13 +96,14 @@ nav ul li {
 }
 
 .loader-container {
-  position: absolute;
+  position: fixed;
   background-color: var(--bg-color);
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99999;
 }
 
 .loader-container .loader {
@@ -112,4 +119,8 @@ nav ul li {
 @keyframes custom-spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.page-container {
+  overflow: hidden;
 }
