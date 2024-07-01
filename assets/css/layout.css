@@ -126,14 +126,14 @@ nav .switchers-container .language-container .flag-options .en {
   height: var(--flag-size);
   padding: 0.5em 2em;
   background-size: var(--flag-size);
-  background: var(--us-flag) no-repeat center/var(--flag-size);;
+  background: var(--us-flag) no-repeat center/var(--flag-size);
 }
 
 nav .switchers-container .language-container .flag-options .es {
   width: var(--flag-size);
   height: var(--flag-size);
   padding: 0.5em 2em;
-  background: var(--es-flag) no-repeat center/var(--flag-size);;
+  background: var(--es-flag) no-repeat center/var(--flag-size);
 }
 
 nav .switchers-container .language-container .flag {
@@ -217,7 +217,17 @@ nav .language-container .flag.spain {
 }
 
 .more-about .about-list {
-  padding: 1rem 0 1rem 0;
+  max-width: fit-content;
+  padding: 3em;
+  border-radius: 8px;
+}
+
+.more-about .about-list.dark-theme {
+  background: var(--sub-panel-dark) !important;
+}
+
+.more-about .about-list.m-bottom {
+  margin-bottom: 2em;
 }
 
 .more-about .about-list ul {

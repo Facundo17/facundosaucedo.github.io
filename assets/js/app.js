@@ -16,7 +16,7 @@ const burger = document.querySelector("#burger-menu");
 const ul = document.querySelector("nav ul");
 const navLink = document.querySelectorAll(".nav-link");
 const darkModeToggle = document.getElementById("darkmode-toggle");
-const navBg = document.querySelector(".background");
+const aboutList = document.querySelectorAll(".about-list");
 
 const panels = document.querySelectorAll(".panel");
 
@@ -56,6 +56,7 @@ const bgColor2 = getVariableValue("--bg-color2");
 const bgColorDark2 = getVariableValue("--bg-color-dark2");
 const primaryColor = getVariableValue("--primary-color");
 const primaryColorDark = getVariableValue("--primary-color-dark");
+const listColor = getVariableValue("--primary-color-link");
 
 function changeBgColor() {
   const currentBg = getVariableValue("--bg-color");
@@ -93,10 +94,17 @@ function changePrimaryColor() {
   }
 }
 
+function changeSubColor() {
+  aboutList.forEach( el => {
+    el.classList.toggle("dark-theme");
+  });
+}
+
 function setDarkTheme() {
   changeBgColor();
   changeBgColor2();
   changePrimaryColor();
+  changeSubColor();
   changeThemePanels();
 }
 
