@@ -145,4 +145,6 @@ if (checkDarkMode === "") {
   clickFromLoad = true;
   darkModeToggle.click();
   showOrHideLoad();
+} else {
+  showOrHideLoad();
 }

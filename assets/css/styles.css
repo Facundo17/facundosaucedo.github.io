@@ -80,6 +80,10 @@ nav ul li {
   font-weight: var(--bold-font);
 }
 
+.page-container section h2:not(.bio-title) {
+  padding: 2em 2em;
+}
+
 .burger-menu {
   z-index: 2;
   color: var(--primary-color);

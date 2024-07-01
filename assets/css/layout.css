@@ -224,6 +224,11 @@ nav .language-container .flag.spain {
   list-style-type: disc !important;
 }
 
+.more-about .link-work {
+  color: var(--primary-color-link);
+  font-weight: 600;
+}
+
 /* seccion skils */
 .skils {
   color: var(--primary-color);
