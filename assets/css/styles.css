@@ -95,11 +95,6 @@ nav ul li {
   display: none;
 }
 
-.extra-padding {
-  padding-top: 8em;
-  padding-bottom: 8em;
-}
-
 .loader-container {
   position: fixed;
   background-color: var(--bg-color);

@@ -169,7 +169,7 @@ nav .language-container .flag.spain {
 
 .bio {
   color: var(--primary-color);
-  width: 25rem;
+  width: 25em;
   padding: 0.625rem;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
