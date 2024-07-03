@@ -292,6 +292,7 @@ nav .language-container .flag.spain {
 .project-pic {
   width: 65%;
   height: 60%;
+  padding: 1em;
 }
 
 .projects-container {
@@ -302,21 +303,18 @@ nav .language-container .flag.spain {
 
 .project-title {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2em;
 }
 
 .project-container {
   text-align: center;
-  width: 21.875rem;
-  padding: 1rem;
+  width: 21.875em;
+  padding: 1em;
 }
 
 .project-container p {
   padding: 0.4rem;
-}
-
-.project-title {
-  margin-bottom: var(--bottom-margin);
+  line-height: 1.5em;
 }
 
 .project-details {

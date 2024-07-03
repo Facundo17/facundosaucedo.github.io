@@ -10,30 +10,33 @@
     "bio-text": "Desarrollador de Software con 6 años de experiencia en desarrollo front-end de páginas web y aplicaciones nativas. Licenciado en analista de sistemas."
   },
   "more-about": {
-    "more-about" : "Más sobre mí",
-    "dx-title" : "Fullstack Developer en Dixit Estudio",
-    "dx-date" : "Julio 2018 - Junio 2021",
-    "dx-list1" : "Desarrollé paneles administrativos web y páginas web para la empresa.",
-    "dx-list2" : "Gestioné y mantuve aplicaciones nativas en Android Studio.",
-    "ontop-title" : "Frontend Developer en Ontop Inc",
-    "ontop-desc" : "Enero 2022 - Abril 2024",
-    "ontop-list1" : "Trabajé en el desarrollo y mantenimiento de este home usando Webflow.",
-    "ontop-list2" : "Como frontend, estuve dedicado al desarrollo y mantenimiento de este sitio web."
+    "more-about": "Más sobre mí",
+    "dx-title": "Fullstack Developer en Dixit Estudio",
+    "dx-date": "Julio 2018 - Junio 2021",
+    "dx-list1": "Desarrollé paneles administrativos web y páginas web para la empresa.",
+    "dx-list2": "Gestioné y mantuve aplicaciones nativas en Android Studio.",
+    "ontop-title": "Frontend Developer en Ontop Inc",
+    "ontop-desc": "Enero 2022 - Abril 2024",
+    "ontop-list1": "Trabajé en el desarrollo y mantenimiento de este home usando Webflow.",
+    "ontop-list2": "Como frontend, estuve dedicado al desarrollo y mantenimiento de este sitio web."
   },
-  "skils" : {
-    "header-skils" : "Mis mejores habilidades"
+  "skils": {
+    "header-skils": "Mis mejores habilidades"
   },
-  "project" : {
-    "project-title" : "Algunos de mis proyectos recientes"
+  "project": {
+    "project-title": "Algunos de mis proyectos recientes",
+    "project1-title": "Página de inicio",
+    "project1-desc": "Desarrollé este ejemplo de un Home para mi anterior trabajo. Utilicé Angular 13 para la creación del proyecto, con Scss y Bootstrap para los estilos.",
+    "project1-link": "Ir a"
   },
-  "contact" : {
-    "contact-title" : "Contactame",
-    "form-name" : "Nombre",
-    "form-email" : "Correo Electrónico",
-    "form-messsage" : "Mensaje",
-    "name" : "Escribe tu nombre",
-    "email" : "Ingresa tu correo electrónico",
-    "message" : "Escribe tu mensaje",
-    "submit-btn" : "Enviar"
+  "contact": {
+    "contact-title": "Contactame",
+    "form-name": "Nombre",
+    "form-email": "Correo Electrónico",
+    "form-messsage": "Mensaje",
+    "name": "Escribe tu nombre",
+    "email": "Ingresa tu correo electrónico",
+    "message": "Escribe tu mensaje",
+    "submit-btn": "Enviar"
   }
 }
