@@ -1,22 +1,6 @@
-# DEVELOPER PORTFOLIO
-
-A portfolio website template for campers
-
-![jane-doe](jane-shot.png)
-
 ## Author
 
-[@koladechris](https://www.twitter.com/koladechris)
-
-## Github repo
-
-This is the [link](https://github.com/Ksound22/developer-portfolio) to the Github repo of the project
-
-## Sample Website
-
-A live demo is already available via this [link](https://eager-williams-af0d00.netlify.app/?)
-
-## Tech Stack
+Facundo Nahuel Saucedo
 
 **Client:** HTML, CSS, Vanilla JavaSCript
 
@@ -48,8 +32,6 @@ I used Ion Icons and Icons8 for the icons, but feel free to use fontawesome or a
 For the form submission, formspree was used. You can get a hands-on tutorial on how to use formspree by watching this [YouTube video](https://formspree.io/). Submissions will be delivered straignt into the specified Gmail account.
 
 In addition to formspree, you can also use Netlify form submission in case you deploy there. Brad Traversy has a [video tutorial](https://www.youtube.com/watch?v=6ElQ689HRcY) on how to do it.
-
-If you encounter problems customizing, reach out to me by sending me a DM on my [Twitter](https://www.twitter.com/koladechris).
 
 ## Acknowledgements
 

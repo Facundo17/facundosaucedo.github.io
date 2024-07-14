@@ -27,6 +27,10 @@ body {
   overflow-y: hidden;
 }
 
+h2 {
+  font-size: 4em;
+}
+
 .body-behavior {
   overflow-y: scroll;
 }
@@ -83,7 +87,7 @@ nav ul li {
 }
 
 .page-container section h2:not(.bio-title) {
-  padding: 2em 2em;
+  padding: 1em 2em 2em 2em;
 }
 
 .burger-menu {

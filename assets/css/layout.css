@@ -176,6 +176,12 @@ nav .language-container .flag.spain {
   transition: var(--transition);
 }
 
+.bio:hover {
+  cursor: pointer;
+  animation: pulse;
+  animation-duration: 1s;
+}
+
 .bio h1 {
   margin-bottom: var(--bottom-margin);
 }
@@ -245,8 +251,30 @@ nav .language-container .flag.spain {
   max-width: 68.75rem;
   margin: auto;
   text-align: center;
-  margin-top: 2.5rem;
   transition: var(--transition);
+}
+
+.skils .skils-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.skils .left {
+  left: -25em;
+}
+
+.skils .right {
+  right: -25em;
+}
+
+.skils .skils-container .skils-block-left,
+.skils .skils-container .skils-block-right {
+  width: 25em;
+  height: 13em;
+  position: absolute;
+  background: var(--bg-color2);
+  z-index: 2;
 }
 
 .encabezado-habilidad {
@@ -268,15 +296,16 @@ nav .language-container .flag.spain {
   box-shadow: 0 3px 10px var(--secondary-shadow);
   padding: 20px;
   margin: 10px;
+  transition: 1s;
+}
+
+.no-transition {
+  transition: 0s !important;
 }
 
 /* usando la librería animate.css */
 .icon-card:hover,
 .up-arrow:hover {
-  animation: pulse;
-  /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1s;
-  /* don't forget to set a duration! */
   cursor: pointer;
 }
 
@@ -327,6 +356,12 @@ nav .language-container .flag.spain {
   box-shadow: 0 3px 10px var(--primary-shadow);
   padding: 20px;
   margin: 10px;
+}
+
+.card-project:hover {
+  cursor: pointer;
+  animation: pulse;
+  animation-duration: 2s;
 }
 
 /* formulario de contact */

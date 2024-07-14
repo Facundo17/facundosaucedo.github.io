@@ -94,11 +94,6 @@
     text-align: justify;
   }
 
-  .icon {
-    width: 5.875rem;
-    height: 5.25rem;
-  }
-
   .projects-container {
     flex-direction: column;
   }
@@ -129,6 +124,10 @@
     width: auto;
     height: 13em;
     border-radius: 24px;
+  }
+
+  h2 {
+    font-size: 2em !important;
   }
 
   .hero .bio {
