@@ -457,6 +457,11 @@ textarea {
   cursor: pointer;
 }
 
+.display-up:hover {
+  animation: pulse;
+  animation-duration: 1s;
+}
+
 .flecha-arriba {
   width: 3rem;
   height: 3rem;

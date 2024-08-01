@@ -31,13 +31,13 @@
     
     <div class="page-container">
       <!-- Navbar -->
-      <nav>
+      <nav class="animate__animated animate__fadeInDown animate__delay-3s">
         <h1>Facundo Saucedo</h1>
         <div class="background"></div>
         <ul class="navegation">
           <li><a href="#about" class="nav-link" id="link1"></a></li>
-          <li><a href="#skils" class="nav-link" id="link2"></a></li>
           <li><a href="#project" class="nav-link" id="link3"></a></li>
+          <li><a href="#skils" class="nav-link" id="link2"></a></li>
           <li><a href="#contact" class="nav-link" id="link4"></a></li>
         </ul>
 
@@ -70,48 +70,30 @@
           src="assets/images/hero-logo.webp"
           alt="jane-doe"
           loading="lazy"
-          class="hero-img"
+          class="hero-img animate__animated animate__fadeInLeft animate__delay-4s"
         />
-        <div class="bio panel animate__animated">
+        <div id="panel" class="bio panel animate__animated animate__bounceInRight animate__delay-5s">
           <h2 class="bio-title" id="bio-title"></h2>
           <p class="bio-text" id="bio-text"></p>
         </div>
       </section>
-      <!-- More about -->
-      <section class="more-about extra-padding">
-        <h2 id="more-about"></h2>
 
-        <div class="about-list m-bottom">
-          <h3 id="dx-title"></h3>
-          <p id="dx-date"></p>
-          <ul>
-            <li>
-              <span id="dx-list1"></span>
-              <a class="link-work" href="https://dixit.tech/" target="_blank"
-                >https://dixit.tech/</a
-              >
-            </li>
-            <li><span id="dx-list2"></span></li>
-          </ul>
-        </div>
-
-        <div class="about-list">
-          <h3 id="ontop-title"></h3>
-          <p id="ontop-desc"></p>
-          <ul>
-            <li>
-              <span id="ontop-list1"></span>
-              <a class="link-work" href="https://www.getontop.com/" target="_blank"
-                >https://www.getontop.com/</a
-              >
-            </li>
-            <li>
-              <span id="ontop-list2"></span>
-              <a class="link-work" href="https://app.getontop.com/" target="_blank"
-                >https://app.getontop.com/</a
-              >
-            </li>
-          </ul>
+      <!-- Projects section -->
+      <section class="project extra-padding" id="project">
+        <h2 class="project-title" id="project-title"></h2>
+        <div class="projects-container">
+          <div class="project-container card-project panel">
+            <img
+              src="assets/images/ontop-template.jpg"
+              alt="ontop-template"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title" id="project1-title"></h3>
+            <p class="project-details" id="project1-desc">
+            </p>
+            <a href="https://ontop-test.netlify.app" target="_blank" class="project-link"><span class="link" id="project1-link"></span></a>
+          </div>
         </div>
       </section>
 
@@ -181,22 +163,41 @@
 
       </section>
 
-      <!-- Projects section -->
-      <section class="project extra-padding" id="project">
-        <h2 class="project-title" id="project-title"></h2>
-        <div class="projects-container">
-          <div class="project-container card-project panel">
-            <img
-              src="assets/images/ontop-template.jpg"
-              alt="ontop-template"
-              loading="lazy"
-              class="project-pic"
-            />
-            <h3 class="project-title" id="project1-title"></h3>
-            <p class="project-details" id="project1-desc">
-            </p>
-            <a href="https://ontop-test.netlify.app" target="_blank" class="project-link"><span class="link" id="project1-link"></span></a>
-          </div>
+      <!-- More about -->
+      <section class="more-about extra-padding">
+        <h2 id="more-about"></h2>
+
+        <div class="about-list m-bottom">
+          <h3 id="dx-title"></h3>
+          <p id="dx-date"></p>
+          <ul>
+            <li>
+              <span id="dx-list1"></span>
+              <a class="link-work" href="https://dixit.tech/" target="_blank"
+                >https://dixit.tech/</a
+              >
+            </li>
+            <li><span id="dx-list2"></span></li>
+          </ul>
+        </div>
+
+        <div class="about-list">
+          <h3 id="ontop-title"></h3>
+          <p id="ontop-desc"></p>
+          <ul>
+            <li>
+              <span id="ontop-list1"></span>
+              <a class="link-work" href="https://www.getontop.com/" target="_blank"
+                >https://www.getontop.com/</a
+              >
+            </li>
+            <li>
+              <span id="ontop-list2"></span>
+              <a class="link-work" href="https://app.getontop.com/" target="_blank"
+                >https://app.getontop.com/</a
+              >
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -250,21 +251,7 @@
       </section>
 
       <!-- Social accounts - Fixed to the right -->
-      <div class="social">
-        <!--<a href="#" target="_blank"
-        ><img
-          src="assets/icons/icons8-twitter-circled.gif"
-          alt="Twitter"
-          loading="lazy"
-          class="socicon"
-      /></a>
-      <a href="#" target="_blank"
-        ><img
-          src="assets/icons/icons8-instagram.gif"
-          alt="Instagram"
-          loading="lazy"
-          class="socicon"
-      /></a>-->
+      <div class="social animate__animated animate__bounceInRight animate__delay-6s">
         <a
           href="https://linkedin.com/in/facundo-saucedo-318b8a213"
           target="_blank"
@@ -285,7 +272,7 @@
       <i class="display-up" id="display-up"
         ><img
           src="assets/icons/icons8-send-letter-96.png"
-          class="socicon up-arrow"
+          class="socicon up-arrow animate__animated animate__pulse"
           alt="display-up"
       /></i>
 
@@ -302,6 +289,7 @@
     </div>
 
     <!-- Website scripts -->
+    <script src="assets/js/animations_controller.js"></script>
     <script src="assets/js/languages.js"></script>
     <script src="assets/js/slideshow_skils.js"></script>
     <script type="module" src="assets/js/app.js"></script>

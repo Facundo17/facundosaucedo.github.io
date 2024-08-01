@@ -12,11 +12,11 @@
   .hero img {
     margin-top: 14em;
     margin-bottom: 5em;
+    height: 13em;
   }
 
   .hero .bio {
     width: 90%;
-    margin-top: 0;
     margin-bottom: 5em;
   }
 
@@ -77,7 +77,6 @@
   }
 
   .bio {
-    margin-top: -7rem;
     width: 20.5rem;
   }
 
