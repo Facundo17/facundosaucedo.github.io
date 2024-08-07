@@ -26,8 +26,8 @@
   "project": {
     "project-title": "Algunos de mis proyectos recientes",
     "project1-title": "Página de inicio",
-    "project1-desc": "Desarrollé este ejemplo de un Home para mi anterior trabajo. Utilicé Angular 13 para la creación del proyecto, con Scss y Bootstrap para los estilos.",
-    "project1-link": "Ir a"
+    "project1-desc": "Desarrollé este ejemplo de un Home para mi anterior trabajo.",
+    "project1-link": "Explorar"
   },
   "contact": {
     "contact-title": "Contactame",

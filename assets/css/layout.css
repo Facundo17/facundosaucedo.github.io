@@ -31,24 +31,26 @@ nav .switchers-container .darkmode-container label .sun,
 nav .switchers-container .darkmode-container label .moon {
   position: absolute;
   z-index: 1;
+}
+
+nav .switchers-container .darkmode-container label .sun img,
+nav .switchers-container .darkmode-container label .moon img {
   width: var(--size-switcher);
   height: var(--size-switcher);
 }
 
 nav .switchers-container .darkmode-container label .sun {
+  display: flex;
   top: 50%;
   transform: translateY(-50%);
   left: 5%;
-  background-image: url("../icons/weather-sun-svgrepo-com.svg");
-  background-size: cover;
 }
 
 nav .switchers-container .darkmode-container label .moon {
+  display: flex;
   top: 50%;
   transform: translateY(-50%);
   right: 5%;
-  background-image: url("../icons/weather-moon-svgrepo-com.svg");
-  background-size: cover;
 }
 
 /* crear el sol */
@@ -101,7 +103,7 @@ nav .switchers-container .language-container .flag-options {
   background-color: var(--bg-color2);
   border-radius: 8px;
   transform: translateY(3em);
-  box-shadow: 0px 0px 5px 0px var(--primary-shadow);
+  box-shadow: 0px 0px 1px 0px var(--primary-shadow);
   z-index: 5;
   display: none;
 }
@@ -109,8 +111,17 @@ nav .switchers-container .language-container .flag-options {
 nav .switchers-container .language-container .flag-options .en:hover,
 nav .switchers-container .language-container .flag-options .es:hover {
   cursor: pointer;
-  border-radius: 8px;
   background-color: var(--bg-hover);
+}
+
+nav .switchers-container .language-container .flag-options .en {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+nav .switchers-container .language-container .flag-options .es {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 nav .switchers-container .language-container:hover {
@@ -160,17 +171,17 @@ nav .language-container .flag.spain {
 }
 
 .hero img {
-  margin-top: 15em;
-  margin-bottom: 15em;
-  height: 30em;
-  width: 40em;
+  margin-top: 10em;
+  margin-bottom: 10em;
+  height: 25em;
+  width: 35em;
   border-radius: 24px;
 }
 
 .bio {
   color: var(--primary-color);
   width: 25em;
-  padding: 0.625rem;
+  padding: 2em;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
   transition: var(--transition);
@@ -319,9 +330,9 @@ nav .language-container .flag.spain {
 }
 
 .project-pic {
-  width: 65%;
-  height: 60%;
-  padding: 1em;
+  border-radius: 24px;
+  max-width: 100%;
+  padding: 0.5em;
 }
 
 .projects-container {
@@ -332,12 +343,16 @@ nav .language-container .flag.spain {
 
 .project-title {
   text-align: center;
-  margin-bottom: 2em;
+}
+
+.subproject-title {
+  padding: 0.5em;
+  text-align: left;
 }
 
 .project-container {
-  text-align: center;
-  width: 21.875em;
+  text-align: left;
+  width: 25em;
   padding: 1em;
 }
 
@@ -346,22 +361,31 @@ nav .language-container .flag.spain {
   line-height: 1.5em;
 }
 
+.project-link {
+  display: flex;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 8px;
+  background: var(--btn-color) !important;
+}
+
+.project-link a {
+  width: 100%;
+  color: #fff !important;
+  font-size: 1.5em;
+}
+
 .project-details {
   margin-bottom: var(--bottom-margin);
+  font-size: 1.5em;
 }
 
 .card-project {
   background-color: #fff;
-  border-radius: 11px;
+  border-radius: 24px;
   box-shadow: 0 3px 10px var(--primary-shadow);
-  padding: 20px;
+  padding: 2em;
   margin: 10px;
-}
-
-.card-project:hover {
-  cursor: pointer;
-  animation: pulse;
-  animation-duration: 2s;
 }
 
 /* formulario de contact */

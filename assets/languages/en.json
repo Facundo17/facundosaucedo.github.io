@@ -26,7 +26,7 @@
   "project": {
     "project-title": "Some of my projects",
     "project1-title": "Web Site Home",
-    "project1-desc": "I developed this example of a Home for my previous work. I used Angular 13 for the project creation, with Scss and Bootstrap for the styles.",
+    "project1-desc": "I developed this example of a Home for my previous work.",
     "project1-link": "Check It Out"
   },
   "contact": {
