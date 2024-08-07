@@ -20,6 +20,10 @@ const aboutList = document.querySelectorAll(".about-list");
 
 const panels = document.querySelectorAll(".panel");
 
+const skilsContainer = document.querySelector("#skils");
+const experienceContainer = document.querySelector("#experience");
+const contactContainer = document.querySelector("#contact");
+
 /* when page refresh */
 window.scrollTo(0, 0);
 

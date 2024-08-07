@@ -1,16 +1,16 @@
 {
   "navbar": {
-    "link1": "Acerca de Mí",
-    "link2": "Habilidades",
-    "link3": "Proyectos",
-    "link4": "Contacto"
+    "link1": "ACERCA DE MÍ",
+    "link2": "HABILIDADES",
+    "link3": "PROYECTOS",
+    "link4": "CONTACTO"
   },
   "hero": {
-    "bio-title": "Sobre Mí",
+    "bio-title": "SOBRE MÍ",
     "bio-text": "Desarrollador de Software con 6 años de experiencia en desarrollo front-end de páginas web y aplicaciones nativas. Licenciado en analista de sistemas."
   },
   "more-about": {
-    "more-about": "Más sobre mí",
+    "more-about": "MI EXPERIENCIA",
     "dx-title": "Fullstack Developer en Dixit Estudio",
     "dx-date": "Julio 2018 - Junio 2021",
     "dx-list1": "Desarrollé paneles administrativos web y páginas web para la empresa.",
@@ -21,10 +21,10 @@
     "ontop-list2": "Como frontend, estuve dedicado al desarrollo y mantenimiento de este sitio web."
   },
   "skils": {
-    "header-skils": "Mis mejores habilidades"
+    "header-skils": "HABILIDADES"
   },
   "project": {
-    "project-title": "Algunos de mis proyectos recientes",
+    "project-title": "MIS PROYECTOS",
     "project1-title": "Página de inicio",
     "project1-desc": "Desarrollé este ejemplo de un Home para mi anterior trabajo.",
     "project1-link": "Explorar",
@@ -33,7 +33,7 @@
     "project2-link": "Explorar"
   },
   "contact": {
-    "contact-title": "Contactame",
+    "contact-title": "CONTACTAME",
     "form-name": "Nombre",
     "form-email": "Correo Electrónico",
     "form-messsage": "Mensaje",
