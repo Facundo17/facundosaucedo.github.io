@@ -321,10 +321,15 @@ nav .language-container .flag.spain {
 
 /* section project */
 .project {
+  opacity: 0;
   color: var(--primary-color);
   padding: 32px 0;
   margin-top: 2rem;
   transition: var(--transition);
+}
+
+.full_opacity {
+  opacity: 1 !important;
 }
 
 .project-pic {

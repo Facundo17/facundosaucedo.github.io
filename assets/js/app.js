@@ -17,15 +17,25 @@ const ul = document.querySelector("nav ul");
 const navLink = document.querySelectorAll(".nav-link");
 const darkModeToggle = document.getElementById("darkmode-toggle");
 const aboutList = document.querySelectorAll(".about-list");
+const projectsCard = document.querySelectorAll(".card-project");
 
 const panels = document.querySelectorAll(".panel");
 
 const skilsContainer = document.querySelector("#skils");
+const projectsContainer = document.querySelector("#project");
 const experienceContainer = document.querySelector("#experience");
 const contactContainer = document.querySelector("#contact");
 
 /* when page refresh */
-window.scrollTo(0, 0);
+
+window.addEventListener("scroll", (e) => {
+  if (projectsContainer.getBoundingClientRect().y <= 100) {
+    projectsContainer.classList.add("full_opacity");
+    projectsCard.forEach((e) => {
+      e.classList.add("animate__animated", "animate__fadeInUp");
+    });
+  }
+});
 
 desplazarArriba.addEventListener("click", () => {
   window.scrollTo({
@@ -99,7 +109,7 @@ function changePrimaryColor() {
 }
 
 function changeSubColor() {
-  aboutList.forEach( el => {
+  aboutList.forEach((el) => {
     el.classList.toggle("dark-theme");
   });
 }
@@ -123,7 +133,6 @@ function showOrHideLoad() {
     }
 
     body.classList.toggle("body-behavior");
-
   }, 3000); // 3 seconds
 }
 
