@@ -1,7 +1,7 @@
 /* media queries */
 .extra-padding {
-  padding-top: 8em;
-  padding-bottom: 8em;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 @media screen and (max-width: 1024px) {

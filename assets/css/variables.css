@@ -27,7 +27,7 @@
     --moon-color: #fff;
     --sun-color: #7e7e7e;
     --size-switcher: 1em;
-    --flag-size: 2em;
+    --flag-size: 4em;
     --us-flag: url("../icons/usa_flag.svg");
     --es-flag: url("../icons/spain_flag.svg");
   }

@@ -29,7 +29,7 @@ const contactContainer = document.querySelector("#contact");
 /* when page refresh */
 
 window.addEventListener("scroll", (e) => {
-  if (projectsContainer.getBoundingClientRect().y <= 100) {
+  if (projectsContainer.getBoundingClientRect().y <= 200) {
     projectsContainer.classList.add("full_opacity");
     projectsCard.forEach((e) => {
       e.classList.add("animate__animated", "animate__fadeInUp");
