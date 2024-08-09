@@ -2,6 +2,7 @@
 @import url("variables.css");
 @import url("resets.css");
 @import url("layout.css");
+@import url("tooltip.css");
 @import url("breakpoints.css");
 
 ul {

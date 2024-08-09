@@ -375,6 +375,25 @@ nav .language-container .flag.spain {
   justify-content: flex-start;
 }
 
+.project-container .project-icon-container {
+  margin-bottom: 1.5em;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.project-container .project-icon-container img:hover {
+  cursor: pointer;
+  background-color: var(--tool-color-hover);
+}
+
+.project-container .project-icon-container img {
+  background-color: var(--tool-color);
+  border-radius: 48px;
+  padding: 0.5em;
+  width: 3em;
+  height: 3em;
+}
+
 .project-container p {
   padding: 0.4rem;
   line-height: 1.5em;
@@ -386,6 +405,10 @@ nav .language-container .flag.spain {
   text-align: center;
   border-radius: 8px;
   background: var(--btn-color) !important;
+}
+
+.project-link:hover {
+  background: var(--primary-hover-color) !important;
 }
 
 .project-link a {
@@ -408,7 +431,6 @@ nav .language-container .flag.spain {
   box-shadow: 0 3px 10px var(--primary-shadow);
   padding: 2em;
   margin: 10px;
-  height: 33em;
 }
 
 /* formulario de contact */
