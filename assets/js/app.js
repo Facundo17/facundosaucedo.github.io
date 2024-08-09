@@ -153,14 +153,7 @@ darkModeToggle.addEventListener("click", () => {
   }
 });
 
-if (checkDarkMode === "") {
-  // no existe la cookie
-  darkmode = true;
-  setCookie("darkmode", darkmode, 25);
-  clickFromLoad = true;
-  darkModeToggle.click();
-  showOrHideLoad();
-} else if (checkDarkMode === "true") {
+if (checkDarkMode === "true") {
   // hay una cookie y está activado el darkmode
   darkmode = true;
   clickFromLoad = true;
