@@ -35,6 +35,12 @@ window.addEventListener("scroll", (e) => {
       e.classList.add("animate__animated", "animate__fadeInUp");
     });
   }
+
+  if (window.scrollY >= 500) {
+    desplazarArriba.classList.add("display-up-fixed");
+  } else {
+    desplazarArriba.classList.remove("display-up-fixed");
+  }
 });
 
 desplazarArriba.addEventListener("click", () => {

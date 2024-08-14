@@ -18,13 +18,14 @@
     --tool-color: #24ffbd;
     --tool-color-hover: #24ff3e87;
     --btn-color: #009dff;
+    --btn-color-hover: #00c8ff;
     --primary-color-dark: #fff;
     --secondary-color: #7bacff;
     --primary-shadow: #8b8eaf;
     --secondary-shadow: #4a646d;
     --bottom-margin: 0.5rem;
     --bottom-margin-2: 4rem;
-    --line-height: 1.7rem;
+    --line-height: 2rem;
     --transition: 0.3s;
     --darkmodetoggle: #ebebeb;
     --moon-color: #fff;
