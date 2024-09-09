@@ -30,7 +30,10 @@
     "project1-link": "Explorar",
     "project2-title": "Aplicación de pronóstico",
     "project2-desc": "Una sencilla aplicación web que permite ver el pronóstico de una ciudad.",
-    "project2-link": "Explorar"
+    "project2-link": "Explorar",
+    "project3-title": "Home de Netflix",
+    "project3-desc": "Un diseño basado en una interfaz de Netflix.",
+    "project3-link": "Explorar"
   },
   "contact": {
     "contact-title": "CONTACTAME",

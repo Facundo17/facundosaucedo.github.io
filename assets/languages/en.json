@@ -30,7 +30,10 @@
     "project1-link": "EXPLORE",
     "project2-title": "Weather App",
     "project2-desc": "A simple web app to see the forecast for a city.",
-    "project2-link": "EXPLORE"
+    "project2-link": "EXPLORE",
+    "project3-title": "Netflix Home",
+    "project3-desc": "A design based on a Netflix interface.",
+    "project3-link": "EXPLORE"
   },
   "contact": {
     "contact-title": "CONTACT ME",
