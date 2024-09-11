@@ -9,17 +9,6 @@
     "bio-title": "ABOUT ME",
     "bio-text": "Software Developer with 6 years of experience in Frontend development of web pages and native applications. Graduate in systems analysis."
   },
-  "more-about": {
-    "more-about": "EXPERIENCE",
-    "dx-title": "Fullstack Developer in Dixit Estudio",
-    "dx-date": "July 2018 - June 2021",
-    "dx-list1": "I developed web administration panels and web pages for the company.",
-    "dx-list2": "I managed and maintained native applications in Android Studio.",
-    "ontop-title": "Frontend Developer in Ontop Inc",
-    "ontop-desc": "January 2022 - April 2024",
-    "ontop-list1": "I worked on the development and maintenance of this home using Webflow.",
-    "ontop-list2": "As a frontend, I was dedicated to the development and maintenance of this website."
-  },
   "skils": {
     "header-skils": "SKILLS"
   },
